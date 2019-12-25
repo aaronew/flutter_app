@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 
+// ** Widgets **
+import 'description_place.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  String descriptionDummy =
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit sollicitudin magna dictumst, eros habitasse mollis cursus placerat gravida cum sociosqu potenti tellus eleifend, magnis bibendum porta curae libero auctor orci dis proin. Luctus quam semper et sem sollicitudin eu nam dignissim, malesuada venenatis vitae congue taciti purus faucibus vehicula.";
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,28 +17,11 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
-            body: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("assets/images/img.jpeg"), fit: BoxFit.cover),
+          appBar: AppBar(
+            title: Text("App Trips"),
           ),
-          child: Center(
-            child: Container(
-              color: Colors.black.withOpacity(0.2),
-              height: 100,
-              child: Center(
-                child: Text(
-                  'Reto Cumplido',
-                  style: TextStyle(
-                      fontSize: 35,
-                      letterSpacing: 10,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold),
-                ),
-              ),
-            ),
-          ),
-        )));
+          body: new DescriptionPlace('Duwili Ella', 4, descriptionDummy),
+        ));
   }
 }
 
