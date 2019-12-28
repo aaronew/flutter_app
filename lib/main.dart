@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 // ** Widgets **
 import 'description_place.dart';
+import 'review_list.dart';
+import 'gradient_back.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,10 +19,16 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
-          appBar: AppBar(
-            title: Text("App Trips"),
+          body: Stack(
+            // Coloca un elemento sobre otro
+            children: <Widget>[
+              ListView(children: <Widget>[
+                DescriptionPlace('Duwili Ella', 4, descriptionDummy),
+                ReviewList()
+              ],),
+              GradientBack()
+            ],
           ),
-          body: new DescriptionPlace('Duwili Ella', 4, descriptionDummy),
         ));
   }
 }
