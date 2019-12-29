@@ -22,11 +22,13 @@ class MyApp extends StatelessWidget {
           body: Stack(
             // Coloca un elemento sobre otro
             children: <Widget>[
-              ListView(children: <Widget>[
-                DescriptionPlace('Duwili Ella', 4, descriptionDummy),
-                ReviewList()
-              ],),
-              GradientBack()
+              ListView(
+                children: <Widget>[
+                  DescriptionPlace('Duwili Ella', 4, descriptionDummy),
+                  ReviewList()
+                ],
+              ),
+              GradientBack("Popular")
             ],
           ),
         ));
