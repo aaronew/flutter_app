@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CardImage extends StatelessWidget {
-  String pathImage = 'asset/images/tesla3.jpg';
+  String pathImage = 'assets/images/tesla3.jpg';
   CardImage(this.pathImage);
 
   @override

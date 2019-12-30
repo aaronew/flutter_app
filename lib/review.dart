@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Review extends StatelessWidget {
-  String pathImage = 'asset/images/people.jpg';
+  String pathImage = 'assets/images/people.jpg';
   String name = "Alejandro Sanchez";
   String details = "1 Review 5 Photos";
   String comment = "There is amazing place in Sri Lanka";
